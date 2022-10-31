@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>08 display属性</title>
+
+  <style>
+/*块级元素:块级元素：不能并排显示，能设置宽高，当不设置width属性时，width自动撑满（比如div、section、header、h、li、ul)*/
+.box1{
+  width: 100px;
+  height: 100px;
+  background-color: #ff4d00;
+}
+.box2{
+  width: 100px;
+  height: 100px;
+  background-color: cornflowerblue;
+}
+span{
+  /*行内元素：能并排显示，不能设置宽高，当不设置width属性时，width自动收缩（a、span、em、b、u、i）*/
+  width: 100px;
+  height: 100px;
+  background-color: orange;
+  padding: 8px 10px;
+  margin-top: 30px;
+}
+
+img{
+  /*行内块：img和表单元素时特殊的行内块，它们既能够设置宽度、高度。也能够并排显示*/
+  width: 100px;
+  height: 100px;
+}
+input{
+  width: 100px;
+  height: 100px;
+}
+  </style>
+</head>
+<body>
+<div class="box1"></div>
+<div class="box2"></div>
+<span>我是span</span>
+<span>我是span</span>
+<div>
+  <img src="../../04%20小慕医生实战/images/gugong.jpeg" alt=""><img src="../../04%20小慕医生实战/images/niaochao.jpeg" alt="">
+</div>
+<input type="text">
+<input type="text">
+</body>
+</html>

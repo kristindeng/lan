@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>外边距</title>
+  <style>
+    /*<!--margin的塌陷：竖直方向的margin有塌陷现象，小的margin会塌陷到大的margin中，从而margin不叠加，只以大值为准-->*/
+    .box1{
+      width: 200px;
+      height: 200px;
+      background-color: #ff4d00;
+      margin-bottom: 70px;
+    }
+    .box2{
+      width: 200px;
+      height: 200px;
+      background-color:green;
+      margin-top: 60px;
+    }
+    *{
+      /*(*表示通配符选择器)*/
+      /*一些元素有默认的margin，比如（body、ul、p等）都有默认的margin，在开始制作网页时，要将它们清除*/
+      margin: 0;
+      padding: 0;
+    }
+    body,ul,p{
+      /*通配符有效率问题，应该使用并集选择器*/
+      margin: 0;
+      padding: 0;
+    }
+    .box3{
+      /*盒子的水平居中，上下是零，左右自动，与文本居中text-align：center是两个概念    盒子的垂直居中，需要使用绝对定位技术*/
+      margin: 0 auto;
+    }
+  </style>
+</head>
+<body>
+
+<div class="box1"></div>
+<div class="box2"></div>
+
+<ul>
+  <li>列表项</li>
+  <li>列表项</li>
+  <li>列表项</li>
+</ul>
+<p>我是段落</p>
+<p>我是段落</p>
+
+<div class="box3"></div>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <style>
+    .box>p{
+      color: yellow;
+    }
+
+    img{
+      width: 300px;
+    }
+    img+span{
+      color: green;
+    }
+
+    h3~span{
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+<!--子选择器（div>p)div的子标签P-->
+<!--相邻兄弟选择器（img+p）图片后面紧跟着的段落将被选中-->
+<!--通用兄弟选择器（p~span）p元素之后的所有同层级span元素-->
+
+<div class="box">
+  <p>我是段落</p>
+  <p>我是段落</p>
+  <div>
+    <p>我是段落</p>
+    <p>我是段落</p>
+  </div>
+</div>
+<p>我是段落</p>
+
+<!--相邻兄弟选择器（img+p）-->
+<p>
+  <img src="../../04%20小慕医生实战/images/gugong.jpeg" alt="">
+  <span>这是北京故宫</span>
+</p>
+<p>
+  <img src="../../04%20小慕医生实战/images/niaochao.jpeg" alt="">
+  <span>这是北京鸟巢</span>
+</p>
+<span>你好</span>
+<span>你好</span>
+
+<!--通用兄弟选择器（p~span）-->
+<h3>我是一个三级标题</h3>
+<span>我是后面的span</span>
+<span>我是后面的span</span>
+<span>我是后面的span</span>
+<span>我是后面的span</span>
+<p>我是一个段落</p>
+<span>我是后面的span</span>
+<span>我是后面的span</span>
+<div>
+  <span>多了一级的span不能被选上</span>
+</div>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>盒模型计算</title>
+  <style>
+    *{
+      padding: 0;
+      margin: 0;
+    }
+    .box{
+      width: 400px;
+      height: 300px;
+      padding: 10px;
+      border: 6px solid cornflowerblue;
+      margin: 40px auto;
+    }
+    .box .C1{
+    /*  老大的总宽度只能是400px,实际占有的高度是200px，并且向下踹20px*/
+    /*  它只给老二留下了80px*/
+      width: 388px;
+      height: 188px;
+      margin-bottom: 20px;
+      border: 6px solid green;
+    }
+    .box .C2{
+    /*  老二还剩下什么？ 剩下了400px宽度、80px高度总空间*/
+      width: 388px;
+      height: 48px;
+      padding:10px 0;
+      border: 6px solid orangered;
+    }
+  </style>
+</head>
+<body>
+<div class="box">
+  <div class="C1"></div>
+  <div class="C2"></div>
+</div>
+</body>
+</html>

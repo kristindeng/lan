@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .money {
+            position: absolute;
+            top: 200px;
+            left: 200px;
+            width: 34px;
+            height: 32px;
+            border: 1px solid #000000;
+            background-image: url("../../04小慕医生实战/images/sprites.png");
+            background-position: -66px -488px;
+        }
+
+        .zjh {
+            position: absolute;
+            top: 300px;
+            left: 300px;
+            width: 32px;
+            height: 32px;
+            border: 1px solid #000000;
+            background-image: url("../../04小慕医生实战/images/sprites.png");
+            background-position: 0 -980px;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        ul li {
+            position: relative;
+            padding-left: 15px;
+        }
+
+        i.dg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 14px;
+            height: 8px;
+            background-image: url("../../04小慕医生实战/images/sprites.png");
+            background-position: 0 -12px;
+        }
+    </style>
+</head>
+<body>
+<!--CSS精灵：将多个小图标合并制作到一张图片上，使用background-position属性单独显示其中一个，也叫CSS雪碧图
+CSS精灵可以减少HTTP请求数，加快网页显示速度。缺点也很明显：不方便测量、后期改动麻烦-->
+<i class="money"></i>
+<i class="zjh"></i>
+<ul>
+    <li><i class="dg"></i>列表项的文字列表项的文字</li>
+    <li><i class="dg"></i>列表项的文字列表项的文字</li>
+    <li><i class="dg"></i>列表项的文字列表项的文字</li>
+    <li><i class="dg"></i>列表项的文字列表项的文字</li>
+    <li><i class="dg"></i>列表项的文字列表项的文字</li>
+</ul>
+</body>
+</html>

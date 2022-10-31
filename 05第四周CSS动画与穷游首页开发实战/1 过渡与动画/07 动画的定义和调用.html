@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <style>
+    .box1{
+      width: 200px;
+      height: 200px;
+      background-color: #ff4d00;
+      /*永远执行可以写infinite*/
+      animation: r 1s linear 0s infinite;
+    }
+    @-webkit-keyframes r {
+      from{
+        transform: rotate(0);
+      }
+      to{
+        transform: rotate(360deg);
+      }
+    }
+
+    .box2{
+      width: 200px;
+      height: 200px;
+      background-color: #00978E;
+      /* alternate移动到最后，再从最后回来*/
+      animation: movelr 2s linear 0s infinite alternate;
+    }
+    @keyframes movelr {
+      from{
+        transform: translateX(0);
+      }
+      to{
+        transform: translateX(1000px);
+      }
+    }
+
+    .box3{
+      width: 200px;
+      height: 200px;
+      background-color: #015E18;
+      /*forwards保持结束之后的状态*/
+      animation: changeToCircle 1s linear 0s forwards;
+    }
+    @keyframes changeToCircle {
+      from{
+        border-radius: 0;
+      }
+      to{
+        border-radius: 50%;
+      }
+    }
+
+    .box4{
+      width: 200px;
+      height: 200px;
+      background-color: red;
+      animation: changeColor 3s linear 0s alternate infinite;
+    }
+    @keyframes changeColor {
+      0%{
+        background-color: red;
+      }
+      20%{
+        background-color:green ;
+      }
+      40%{
+        background-color: yellow;
+      }
+      60%{
+        background-color: blue;
+      }
+      80%{
+        background-color: purple;
+      }
+      100%{
+        background-color: sandybrown;
+      }
+    }
+  </style>
+</head>
+<body>
+<!--动画的定义：可以使用@keyframes来定义动画，keyframes表示“关键帧”，在项目上线前，要补上@-wekkit-这样的私有前缀
+定义动画之后，就可以使用animation属性调用动画  如果想永远执行可以写infinite-->
+<div class="box1"></div>
+<div class="box2"></div>
+<div class="box3"></div>
+<div class="box4"></div>
+</body>
+</html>

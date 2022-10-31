@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <style>
+    /*.box{*/
+    /*<!--绝对定位：盒子可以在浏览器中以坐标进行位置的精准描述-->*/
+    /*  position: absolute;*/
+    /*  top: 300px;*/
+    /*  left: 400px;*/
+    /*  width: 200px;*/
+    /*  height: 200px;*/
+    /*  background-color: #ff4d00;*/
+    /*}*/
+
+
+    .box1{
+      width: 200px;
+      height: 200px;
+      background-color: #ff4d00;
+    }
+    .box2{
+      width: 200px;
+      height: 200px;
+      background-color: green;
+      position: absolute;
+      top: 400px;
+      left: 300px;
+
+    }
+    .box3{
+      width: 200px;
+      height: 200px;
+      background-color: blue;
+
+    }
+  </style>
+</head>
+<body>
+<!--位置描述词：left到左边的距离  right到右边的距离  top到上边的距离    bottom到下边的距离-->
+<!--<div class="box"></div>-->
+
+
+<!--绝对定位的元素脱离标准文档流，将释放自己的位置，对其他元素不会产生任何干扰，而是对它们进行压盖-->
+<div class="box1"></div>
+<div class="box2"></div>
+<div class="box3"></div>
+</body>
+</html>

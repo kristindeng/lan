@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>box-sizing属性</title>
+  <style>
+    .box{
+      box-sizing: border-box;
+      width: 200px;
+      height: 200px;
+      border: 10px solid cadetblue;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+<!--将盒子添加了box-sizing：border-box之后，盒子的width、height数字就表示盒子实际占有的宽高（不含margin）-->
+<!--即padding、border变为内缩的，不再是外扩的-->
+<!--box-sizing属性大量应用于移动网页制作中，因为它结合百分比布局，弹性布局等非常好用，在PC页面开发中使用较少，兼容IE9-->
+<div class="box"></div>
+</body>
+</html>

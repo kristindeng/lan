@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <style>
+    /*transform：rotate（45deg-旋转角度），角度为正，则顺时针方向旋转，否则，逆时针方向旋转*/
+    img{
+      border: 1px solid #000000;
+    }
+    .pic1{
+      transform: rotate(30deg);
+    }
+    .pic2{
+      transform: rotate(45deg);
+    }
+    .pic3{
+      transform: rotate(90deg);
+    }
+    .pic4{
+      transform: rotate(135deg);
+    }
+    .pic5{
+      transform: rotate(369deg);
+    }
+  /* transform-origin属性设置自己的自定义变换原点 */
+    .pic6{
+      /*以左上角为中心点进行旋转*/
+      transform-origin: 0 0;
+      transform: rotate(30deg);
+    }
+  </style>
+</head>
+<body>
+<p>
+  <img src="../../04%20小慕医生实战/images/goblin.png" class="pic1">
+</p>
+<p>
+  <img src="../../04%20小慕医生实战/images/goblin.png" class="pic2">
+</p>
+<p>
+  <img src="../../04%20小慕医生实战/images/goblin.png" class="pic3">
+</p>
+<p>
+  <img src="../../04%20小慕医生实战/images/goblin.png" class="pic4">
+</p>
+<p>
+  <img src="../../04%20小慕医生实战/images/goblin.png" class="pic5">
+</p>
+<p>
+  <img src="../../04%20小慕医生实战/images/goblin.png" class="pic6">
+</p>
+</body>
+</html>

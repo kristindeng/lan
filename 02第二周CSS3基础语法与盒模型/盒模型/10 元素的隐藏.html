@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>元素的隐藏</title>
+  <style>
+    .box1{
+      width: 200px;
+      height: 200px;
+      background-color: #ff4d00;
+    }
+    .box2{
+      width: 200px;
+      height: 200px;
+      background-color: cornflowerblue;
+    /*  隐藏,彻底放弃位置*/
+    /*  display: none;*/
+      /*隐藏，位置还在*/
+      visibility: hidden;
+    }
+    .box3{
+      width: 200px;
+      height: 200px;
+      background-color: chartreuse;
+
+
+    }
+  </style>
+</head>
+<body>
+<!--使用display：none，可以将元素隐藏，元素将彻底放弃位置，如同没有写它的标签一样-->
+<!--使用visibility：hidden；也可以将元素隐藏，但是元素不放弃自己的位置-->
+<div class="box1"></div>
+<div class="box2"></div>
+<div class="box3"></div>
+</body>
+</html>

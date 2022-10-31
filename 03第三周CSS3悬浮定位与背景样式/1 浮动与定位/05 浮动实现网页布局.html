@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    header{
+      width: 1000px;
+      height: 100px;
+      margin: 0 auto;
+    }
+    .content{
+      width: 1000px;
+      height: 500px;
+      margin: 20px auto;
+    }
+    footer{
+      width: 1000px;
+      height: 400px;
+      margin: 0 auto;
+      background-color: blue;
+    }
+    header .logo{
+      float: left;
+      width: 220px;
+      height: 100px;
+      background-color: aqua;
+    }
+    header .login{
+      float: right;
+      width: 220px;
+      height: 30px;
+      background-color: aqua;
+    }
+    header .nav{
+      float: right;
+      width: 690px;
+      height: 60px;
+      margin-top: 10px;
+      background-color:green ;
+    }
+
+    .content .ad{
+      float: left;
+      width: 300px;
+      height: 500px;
+      background-color: blue;
+    }
+    .content main{
+      float: right;
+      width: 680px;
+      height: 500px;
+    }
+    .content main .banner{
+      width: 680px;
+      height: 380px;
+      background-color: #ff4d00;
+    }
+    .content main .pics{
+      width: 680px;
+      height: 100px;
+      margin-top: 20px;
+    }
+    .content main .pics ul{
+      list-style: none;
+    }
+    .content main .pics li{
+      float: left;
+      width: 160px;
+      height: 100px;
+      background-color: gold;
+      margin-right: 10px;
+    }
+  </style>
+</head>
+<body>
+<!--注意事项：垂直显示的盒子，不要设置浮动，只有并排显示的盒子才要设置浮动-->
+<header>
+  <div class="logo"></div>
+  <div class="login"></div>
+  <div class="nav"></div>
+</header>
+<section class="content">
+  <aside class="ad"></aside>
+  <main>
+    <div class="banner"></div>
+    <div class="pics">
+      <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
+  </main>
+</section>
+<footer></footer>
+</body>
+</html>

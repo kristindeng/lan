@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            width: 508px;
+            height: 107px;
+            /*border: 1px solid #000000;*/
+            margin: 40px auto;
+        }
+
+        .box ul {
+            list-style: none;
+        }
+
+        .box ul li {
+            float: left;
+            width: 107px;
+            height: 107px;
+            margin-right: 20px;
+            /*background-color: #ff4d00;*/
+            position: relative;
+        }
+
+        .box ul li::before {
+            content: '';
+            display: block;
+            width: 107px;
+            height: 107px;
+            transform: rotate(0);
+            transition: transform 1s linear 0s;
+        }
+
+        .box ul li img {
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            top: 50%;
+            left: 50%;
+            margin-left: -30px;
+            margin-top: -30px;
+            transition: transform 1s linear 0s;
+        }
+
+        .box ul li:hover::before {
+            /*背景圆环旋转一周*/
+            transform: rotate(360deg);
+        }
+        .box ul li:hover img{
+            /*中心图标放大1.2倍*/
+            transform: scale(1.2);
+        }
+
+        .box ul li:nth-child(1)::before {
+            background-image: url("../../04小慕医生实战/images/a_1.png");
+        }
+
+        .box ul li:nth-child(2)::before {
+            background-image: url("../../04小慕医生实战/images/a_2.png");
+        }
+
+        .box ul li:nth-child(3)::before {
+            background-image: url("../../04小慕医生实战/images/a_3.png");
+        }
+
+        .box ul li:nth-child(4)::before {
+            background-image: url("../../04小慕医生实战/images/a_4.png");
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <ul>
+        <li>
+            <img src="../../04%20小慕医生实战/images/icon1.svg" alt="">
+        </li>
+        <li>
+            <img src="../../04%20小慕医生实战/images/icon2.svg" alt="">
+        </li>
+        <li>
+            <img src="../../04%20小慕医生实战/images/icon3.svg" alt="">
+        </li>
+        <li>
+            <img src="../../04%20小慕医生实战/images/icon4.svg" alt="">
+        </li>
+    </ul>
+</div>
+</body>
+</html>

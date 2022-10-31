@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        /*<!--id权重>class权重>标签权重-->*/
+        /*p {*/
+        /*    color: #ff4d00;*/
+        /*}*/
+
+        /*#para {*/
+        /*    text-decoration: underline;*/
+        /*    color: blue;*/
+        /*}*/
+
+        /*.spec {*/
+        /*    font-style: italic;*/
+        /*    color: blueviolet;*/
+        /*}*/
+
+
+        /*权重（2，0，1*/
+        #box1 #box2 p{
+            color: red;
+        }
+        /*权重（2，1，2）*/
+        #box1 div.box2 #box3 p{
+            color: saddlebrown;
+        }
+        /*0，3，1*/
+        .box1 .box2 .box3 p{
+            color: yellow;
+        }
+
+
+    /*    权重（0，1，1）*/
+        .list li{
+            color: green;
+        }
+        /*权重（0，1，0,这时颜色不会生效，提升权重加上.list li就会生效，）*/
+        .list li.spec{
+            color: aqua;
+        }
+    </style>
+</head>
+<body>
+
+<!--！important提升权重-->
+<!--<p id="para" class="spec">我是段落</p>-->
+
+<div id="box1" class="box1">
+    <div id="box2" class="box2">
+        <div id="box3" class="box3">
+            <p>我是段落</p>
+        </div>
+    </div>
+</div>
+
+<ul class="list">
+    <li>列表项</li>
+    <li class="spec">列表项</li>
+    <li class="spec">列表项</li>
+    <li>列表项</li>
+
+</ul>
+</body>
+</html>

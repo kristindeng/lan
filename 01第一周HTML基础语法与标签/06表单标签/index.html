@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--value表示已经填写好的值， placeholder表示提示文本，将以浅色文字写在文本框中，并不是文本框中的值-->
+<!--action属性表示表单要提交到的后台程序的网址   method属性表示表单提交的方式--有get和post-->
+<!--单选按钮：type属性值被设置为radio的<input>元素可以创建单选按钮，互斥的单选按钮应该设置为他们的name为相同值-->
+<!--单选按钮要有value属性，向服务器提交的就是value值，单选按钮如果加上checked属性，表示默认被选中-->
+
+<!--label标签用来将文字和单选按钮进行绑定，用户点击文字的时候也视为点击了单选按钮-->
+<!--复选框：checkbox，同组复选框应该设置它们的name为相同值，也要有value属性-->
+<form action="tijiao.php" method="post">
+  <p>
+    请输入你的姓名：<input type="text">
+  </p>
+  <p>
+    报考院校：<input type="text" value="清华大学" disabled>
+  </p>
+  <p>
+    毕业学校：<input type="text" placeholder="请输入真实的毕业学校哦">
+  </p>
+
+  <p>
+<!--    HTML5的用法-->
+    性别：
+   <label>
+     <input type="radio" name="sex" value="男" checked>男
+   </label>
+
+    <label>
+      <input type="radio" name="sex"value="女" >女
+    </label>
+  </p>
+
+  <p>
+<!--    这是HTML4label用法-->
+    血型：
+    <input type="radio" name="bloodtype" checked id="A"> <label for="A">A</label>
+    <input type="radio" name="bloodtype" id="B"> <label for="B">B</label>
+    <input type="radio" name="bloodtype" id="c"> <label for="c">c</label>
+    <input type="radio" name="bloodtype" id="o"> <label for="o">o</label>
+  </p>
+
+  <!--复选框：checkbox，同组复选框应该设置它们的name为相同值，也要有value属性-->
+  <p>
+    <label>
+      <input type="checkbox" name="hobby" value="足球"> 足球
+    </label>
+    <label>
+      <input type="checkbox" name="hobby" value="篮球"> 篮球
+    </label>
+    <label>
+      <input type="checkbox" name="hobby" value="羽毛球"> 羽毛球
+    </label>
+    <label>
+      <input type="checkbox" name="hobby" value="游泳"> 游泳
+    </label>
+  </p>
+
+  <!--  密码框：password-->
+  <p>
+    请输入密码：
+    <input type="password" >
+  </p>
+
+<!--  下拉菜单：select表示下拉菜单，option是他的内部选项-->
+  <p>
+    选择你最喜欢的编程语言
+    <select>
+      <option value="JavaScript">JavaScript</option>
+      <option value="golang">golang</option>
+      <option value="c++">c++</option>
+    </select>
+  </p>
+
+<!--    多行文本框：textarea，有rows和cols属性，用于定义多行文本框的行数和列数-->
+    <p>
+        留言：
+        <textarea cols="30" rows="10"></textarea>
+    </p>
+
+<!-- 三种按钮：button普通按钮\ submit提交按钮\reset重置按钮-->
+    <p>
+        <button>我是一个普通按钮</button>
+    </p>
+    <p>
+        <input type="button" value="我是一个普通按钮">
+    </p>
+
+    <p>
+        <input type="submit" value="我是一个提交按钮">
+    </p>
+    <p>
+        <input type="reset" value="我是一个重置按钮">
+    </p>
+
+</form>
+</body>
+</html>

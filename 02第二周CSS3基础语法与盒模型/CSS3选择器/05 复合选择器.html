@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--  复合选择器包括三种：-->
+    <!--  第一：后代选择器（.box .spec)  交集选择器（li.spec)  并集选择器(ul,ol)-->
+
+    <style>
+        <!--
+        空格表示box的所有后代，并不一定指儿子-- >
+        .box .spec em {
+            color: green;
+        }
+
+        h3.spec {
+            font-style: italic;
+        }
+        ul,ol{
+            list-style: none;
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <ul>
+        <li>
+            <p>我是段落</p>
+        </li>
+        <li>
+            <p class="spec">我是段落<em>强调文字</em></p>
+        </li>
+    </ul>
+</div>
+
+<!--交集选择器-->
+<h3 class="spec">我是一个三级标题</h3>
+
+<!--并集选择器-->
+<ul>
+    <li>无序列表</li>
+    <li>无序列表</li>
+    <li>无序列表</li>
+    <li>无序列表</li>
+</ul>
+<ol>
+    <li>有序列表</li>
+    <li>有序列表</li>
+    <li>有序列表</li>
+    <li>有序列表</li>
+</ol>
+</body>
+</html>

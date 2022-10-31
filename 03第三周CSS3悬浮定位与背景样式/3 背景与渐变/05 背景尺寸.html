@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .box{
+            width: 500px;
+            height: 300px;
+            border: 1px solid #000000;
+            background-image: url("../../04小慕医生实战/images/gugong.jpeg");
+            /*background-size：100px 200px （分别表示宽度和高度）*/
+            background-size: 300px auto;
+            margin-bottom: 10px;
+        }
+        .box1{
+            width: 500px;
+            height: 300px;
+            border: 1px solid #000000;
+            background-image: url("../../04小慕医生实战/images/gugong.jpeg");
+            /*值也可以用百分数来设置，表示盒子宽、高的百分之多少*/
+            /*需要等比例设置的值，用auto表示*/
+            background-size: 50% auto;
+            margin-bottom: 10px;
+        }
+        /*<!--contain表示将背景图片智能改变尺寸以容纳到盒子里   cover表示将背景图片智能改变尺寸以撑满盒子-->*/
+        .box2{
+            width: 400px;
+            height: 300px;
+            border: 1px solid #000000;
+            background-image: url("../../04小慕医生实战/images/niaochao.jpeg");
+            background-size: contain;
+            background-repeat: no-repeat;
+            margin-bottom: 10px;
+        }
+        .box3{
+            width: 400px;
+            height: 300px;
+            border: 1px solid #000000;
+            background-image: url("../../04小慕医生实战/images/niaochao.jpeg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+<!--background-size属性（设置背景图片的尺寸，兼容到IE9）-->
+<!--contain和cover是两个特殊的background-size的值-->
+<div class="box"></div>
+<div class="box1"></div>
+<div class="box2"></div>
+<div class="box3"></div>
+</body>
+</html>

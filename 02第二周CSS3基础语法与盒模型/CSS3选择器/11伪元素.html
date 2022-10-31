@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        a::before{
+            content: "☆";
+        }
+        a::after{
+            content: "♥";
+        }
+        .box1{
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+        }
+        .box1::selection{
+            background-color: blue;
+            color: #ff4d00;
+        }
+
+        /*--(::first-letter)会选中某元素中（必须是块级元素）第一行的第一个字母*/
+        /*-(::first-line）会选中某元素中（必须是块级元素）第一行的全部文字) */
+        .box1::first-letter{
+            font-size: 50px;
+        }
+        .box1::first-line{
+            /*添加下划线*/
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+<!--伪元素：表示虚拟动态创建的元素，用双冒号表示 IE8可以兼容单冒号-->
+
+<p>
+    <a href="">我是一个超级链接</a>
+</p>
+<p>
+    <a href="">我是一个超级链接</a>
+</p>
+<p>
+    <a href="">我是一个超级链接</a>
+</p>
+
+<!--(::selection CSS伪元素应用于文档中被用户高亮的部分，也就是使用鼠标圈选的部分-->
+<p class="box1">
+    文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字
+</p>
+
+
+</body>
+</html>

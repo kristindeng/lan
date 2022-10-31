@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <p>
+        颜色选择控件：
+        <input type="color">
+    </p>
+    <p>
+        日期选择：
+        <input type="date">
+    </p>
+    <p>
+        时间选择：
+        <input type="time">
+    </p>
+    <p>
+        电子邮件：
+        <input type="email">
+    </p>
+    <p>
+        必填：
+        <input type="text" required>
+    </p>
+    <p>
+        数字：
+        <input type="number" min="10" max="20">
+    </p>
+    <p>
+        拖拽条：
+        <input type="range" min="10" max="20">
+    </p>
+    <p>
+        搜索：
+        <input type="search">
+    </p>
+    <p>
+        网址：
+        <input type="url">
+    </p>
+    <p>
+        <input type="submit" value="提交表单">
+    </p>
+</form>
+
+<!--datalist控件：可以为输入框提供一些备选项，当用户输入的内容与备选项文字相同时，将会显示智能感应-->
+<p>
+    省份：
+    <input type="text" list="province-list">
+    <datalist id="province-list">
+        <option value="山东">
+        <option value="四川">
+        <option value="陕西">
+        <option value="河南">
+        <option value="湖北">
+    </datalist>
+</p>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <style>
+    .box1{
+      width: 200px;
+      height: 200px;
+      background-color: white;
+      border: 2px solid black;
+      margin-bottom: 20px;
+      box-shadow: 2px 2px 10px rgba(0,0,255,.5);
+    }
+    .box2{
+      width: 200px;
+      height: 200px;
+      background-color: white;
+      border: 1px solid black;
+      margin-bottom: 20px;
+      /*第四个数值是延展值*/
+      box-shadow: 2px 2px 10px 30px rgba(0,0,255,.5);
+    }
+    .box3{
+      width: 200px;
+      height: 200px;
+      background-color: white;
+      border: 1px solid black;
+      margin-bottom: 20px;
+      /*inset表示内阴影*/
+      box-shadow: inset 2px 2px 10px 30px rgba(255,0,0,.5);
+    }
+    .box4{
+      width: 200px;
+      height: 200px;
+      background-color: white;
+      border: 1px solid black;
+      margin-bottom: 20px;
+      /*  box-shadow属性值可以用逗号隔开多个，表示携带多个阴影*/
+      box-shadow:2px 2px 10px red, 4px 4px 10px blue, 6px 6px 50px green, inset 6px 6px 6px yellow;
+
+    }
+
+  </style>
+</head>
+<body>
+<!--box-shadow：10px(X偏移） 20px（Y偏移） 30px（模糊量） rgba（0，0，0，.4)-->
+<div class="box1"></div>
+<div class="box2"></div>
+<div class="box3"></div>
+<div class="box4"></div>
+</body>
+</html>

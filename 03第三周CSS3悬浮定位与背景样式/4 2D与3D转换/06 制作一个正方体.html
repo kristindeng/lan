@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    .box{
+      width: 200px;
+      height: 200px;
+      border: 1px solid #000000;
+      margin: 100px auto;
+      perspective: 300px;
+      position: relative;
+    }
+    .box p{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 200px;
+      height: 200px;
+    }
+    .box p:nth-child(1){
+      background-color: #34033866;
+    /*  前面*/
+      transform: translateZ(100px);
+    }
+    .box p:nth-child(2){
+      background-color: #7CD99F76;
+      /*顶面*/
+      transform: rotateX(90deg) translateZ(100px);
+    }
+    .box p:nth-child(3){
+      background-color: #14169A52;
+    /*  背面*/
+      transform: rotateX(180deg) translateZ(100px);
+    }
+    .box p:nth-child(4){
+      background-color: #DA362484;
+    /*  底面*/
+      transform: rotateX(-90deg) translateZ(100px);
+    }
+    .box p:nth-child(5){
+      background-color:#EE00FF76;
+    /*  侧面*/
+      transform: rotateX(90deg) translateZ(100px);
+    }
+    .box p:nth-child(6){
+      background-color:#ECC70C51;
+      transform: rotateX(-90deg) translateZ(100px);
+    }
+  </style>
+</head>
+<body>
+<div class="box">
+  <p></p>
+  <p></p>
+  <p></p>
+  <p></p>
+  <p></p>
+  <p></p>
+</div>
+</body>
+</html>

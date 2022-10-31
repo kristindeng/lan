@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <style>
+    .box1{
+      width: 200px;
+      height: 200px;
+      background-color: #ff4d00;
+      border-top: 3px solid blue;
+    }
+    section{
+      /*<!--四个方向的边框（border-top上边框\right右边框\bottom下边框\left左边框-->*/
+      float: left;
+      width: 200px;
+      height: 200px;
+      border: 3px solid black;
+      margin-right: 10px;
+    }
+    section.spec{
+      border-bottom-color: rebeccapurple;
+      border-top-style: dotted;
+      /*去掉左边框*/
+      border-left: none;;
+    }
+  </style>
+</head>
+<body>
+
+<div class="box1"></div>
+<section></section>
+<section class="spec"></section>
+<section></section>
+<section></section>
+</body>
+</html>

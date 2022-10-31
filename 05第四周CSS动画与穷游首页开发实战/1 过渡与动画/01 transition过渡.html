@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /*哪些属性可以参与过渡，所有数值类型的属性，都可以参与过渡，比如：width、 height、left、top、border-radius*/
+        /*背景颜色和文字颜色都可以被过渡*/
+        /*所有变形（2D和3D）都能被过渡*/
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: #ff4d00;
+            /* width什么属性过渡  5s动画时长 linear变化速度曲线 0s表示延迟时间*/
+            transition: width 5s linear 0s;
+            margin-bottom: 10px;
+        }
+
+        .box:hover {
+            width: 800px;
+        }
+
+        .box2 {
+            margin-bottom: 10px;
+        }
+
+        .box2 p {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            left: 0;
+            background-color: #ff4d00;
+            transition: left 1s linear 0s;
+
+        }
+
+        .box2:hover p {
+            left: 1000px;
+        }
+
+        .box3 {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            transition: background-color 1s linear 0s;
+        }
+
+        .box3:hover {
+            background-color: #015E18;
+        }
+
+        .box4 {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            margin-top: 10px;
+            border-radius: 0;
+        }
+
+        .box4:hover {
+            border-radius: 50%;
+        }
+        .box5{
+            width: 200px;
+            height: 200px;
+            background-color: #00978E;
+            margin-bottom: 10px;
+            transition: transform 1s linear 0s;
+        }
+        .box5:hover{
+            /*scale实现缩放变形*/
+            transform: scale(1.2) rotate(360deg);
+        }
+        .box6{
+            perspective: 300px;
+            width: 200px;
+            height: 200px;
+            border: 1px solid #000000;
+        }
+        .box6 p{
+            width: 200px;
+            height: 200px;
+            background-color: #ff4d00;
+            transition: transform 1s linear 0s;
+        }
+        .box6:hover p{
+            transform: rotatex(360deg) rotateY(360deg);
+        }
+
+    /*    如果要所有的属性都参与过渡，可以写all*/
+        .box7{
+            width: 400px;
+            height: 200px;
+            background-color: #ff4d00;
+            border-radius: 0;
+            margin-top: 10px;
+            transition: all 1s linear 0s;
+        }
+        .box7:hover{
+            width: 400px;
+            height: 160px;
+            background-color: #00978E;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+<!--transition过渡可以为一个元素在不同样式之间变化自动添加“补间动画”  优点：动画更细腻，内存开销小-->
+<div class="box"></div>
+<div class="box2">
+    <p></p>
+</div>
+<div class="box3"></div>
+<div class="box4"></div>
+<div class="box5"></div>
+<div class="box6">
+    <p></p>
+</div>
+<div class="box7"></div>
+</body>
+</html>

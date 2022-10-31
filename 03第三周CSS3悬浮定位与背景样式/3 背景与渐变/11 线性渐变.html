@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <style>
+    .box1{
+      /*不同浏览器有不同的私有前缀，用来对试验性质的CSS属性加以标识*/
+      width: 200px;
+      height: 200px;
+      border: 1px solid #000000;
+      margin-bottom: 10px;
+      /*加上的好处：低版本的浏览器也能识别这种实验性质的语句，并予以支持*/
+      background-image:-webkit-linear-gradient(to right, red, blue);
+      background-image:-moz-linear-gradient(to right, red, blue);
+      background-image:-ms-linear-gradient(to right, red, blue);
+      background-image:-o-linear-gradient(to right, red, blue);
+    }
+    .box2{
+      width: 200px;
+      height: 200px;
+      border: 1px solid #000000;
+      margin-bottom: 10px;
+      background-image:linear-gradient(45deg, red, blue);
+    }
+    .box3{
+      width: 200px;
+      height: 200px;
+      border: 1px solid #000000;
+      margin-bottom: 10px;
+      background-image:linear-gradient(to bottom, blue, yellow 20%, red);
+    }
+    .box4{
+      width: 200px;
+      height: 200px;
+      border: 1px solid #000000;
+      margin-bottom: 10px;
+      background-image:linear-gradient(to right, red, orange, yellow, green, blue, purple);
+    }
+
+
+  </style>
+</head>
+<body>
+<!--盒子的background-image属性可以用linear-gradient（）形式创建线性渐变背景
+background-image：linear-gradient（to right（渐变方向）， blue（开始颜色）， red（结束颜色））
+渐变方向也可以写出度数background-image：linear-gradient（45deg， blue（开始颜色）， red（结束颜色）
+可以有多个颜色值，并且可以用百分数定义它们出现的位置background-image：linear-gradient（to bottom， blue，yellow 20%， red）-->
+<div class="box1"></div>
+<div class="box2"></div>
+<div class="box3"></div>
+<div class="box4"></div>
+<div class="box5"></div>
+</body>
+</html>
