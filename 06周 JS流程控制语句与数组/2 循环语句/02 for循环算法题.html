@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  //循环开始的时候定义sum，sum就是累加器，初始值是0
+  //创建累加器
+  // var sum = 0
+  // //遍历1到100的每一个数字，每遍历一个数字要把这个数字加到sum中去
+  // for (var i = 1; i <= 100; i++){
+  //   sum += i
+  // }
+  // //输出累加器的值
+  // console.log(sum)
+
+  //穷举法
+  //1-100数字中哪个数字除以3余数是1，除以4余2，除以5余3
+  for (var i = 1; i <=100; i++){
+    if (i % 3===1 && i % 4 ===2 && i % 5 === 3){
+      console.log(i)
+    }
+  }
+</script>
+</body>
+</html>

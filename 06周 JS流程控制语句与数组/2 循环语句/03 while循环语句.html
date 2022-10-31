@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  //while循环语句是一种'不定范围'循环，和for循环各有不同的用武之地
+  //while循环必须自己在while循环外先定义好循环变量，循环体内的语句，必须使循环测试条件趋向不成立，否则会死循环
+  //输出1、2、3。。。。100
+  // var i = 1;
+  // while (i <= 100){
+  //   console.log(i);
+  //   i ++;
+  // }
+
+
+  //累加器
+  // var sum = 0;
+  // var i = 1;
+  // while (i <= 100){
+  //   sum += i;
+  //   i ++;
+  // }
+  // console.log(sum)
+
+  //更适合while循环的场景
+  //寻找满足n的平方大于456789的最小整数
+  //穷举法，从1开始实验
+  // var n = 1;
+  // while (n * n <= 456789){
+  //   n++
+  // }
+  // console.log(n)
+
+
+  //小兔子拔萝卜，第1天拔1个，第2天拔2个，第3天拔3个，问第几天能拔完500个萝卜
+  var i = 1;
+  var sum = 0;
+  while (sum < 500){
+    sum += i;
+    i++
+  }
+  //一定要注意这里有一个'出一错误'
+  console.log(i-1)
+</script>
+</body>
+</html>

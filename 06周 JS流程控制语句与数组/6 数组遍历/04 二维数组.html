@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // TODO 以数组作为数组元素的数组，即数组的数组
+    var matrix = [
+        [11, 33, 55],
+        {"name": "兰兰", "0": "我是个数字"},
+            [36, 49, 52],
+            [56, 10, 23]
+    ]
+    // console.log(matrix.length)
+    //循环输出二维数组的每一项
+    for (var i = 0; i < matrix.length; i++) {
+        let arr = matrix[i]
+        console.log("第一层遍历： matrix[i]", arr)
+        if (Array.isArray(arr)) {
+            for (var j = 0; j < arr.length; j++) {
+                console.log("第二层遍历：matrix["+ i +"][" + j +"]", arr[j])
+            }
+        } else {
+            console.log(arr.name)
+            console.log(arr["0"])
+        }
+    }
+</script>
+</body>
+</html>

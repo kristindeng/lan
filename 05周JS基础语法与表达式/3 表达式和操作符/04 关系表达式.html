@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  //判断是否相等：JS中等号=表示赋值，而不是相等。判断相等应该使用==运算符
+  //相等和全等：
+  //两个等号==运算符不比较值的类型，它会进行隐式转换后，比较值是否相等
+  //三个等号===运算符，不仅比较值是否相同，也比较类型是否相同
+  //5 == '5'true  5 ==='5'false
+
+  //null和undefined用===比较时结果为false是因为类型不同：typeof null：object  typeof undefined：undefined
+  //undefined ==null //true
+  //undefined === null //false
+
+  //NaN不自等
+  // NaN == NaN false  NaN === NaN false
+
+  //如何判断某变量值为NaN
+  //isNaN（）函数恶意用来判断变量值是否为NaN
+  //isNaN（NaN）  //true   isNaN（5）//false
+  //弊端：它的机理是：只要该变量传入Number（）的执行结果是NaN，则isNaN（）函数都会得到true
+  // isNaN（undefined）//true    isNaN（'3'）//true  isNaN（null）//false
+
+  //！=表示不相等  ！==表示不全等
+  // 5 != 6true  5 !==6true   5 !='5'false  5!=='5'true
+  //Js中没有连比
+  //判断变量a是不是介于15之间，3 <= a <=15(不能这样写）
+</script>
+</body>
+</html>

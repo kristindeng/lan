@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  //递归要素：
+  //边界条件：确定递归到何时终止，也称为递归出口
+  //递归模式：大问题是如何分解为小问题的，也称为递归体
+
+  //书写一个函数，这个函数内部自己会调用自己，从而形成递归
+  function factorial(n) {
+    //函数的功能是计算n的阶乘，n！不就是n*（n-1）！么？
+    //这个就是递归出口,如果计算1的阶乘，可以不用递归，直接告诉你答案
+    if (n === 1) return 1
+    //如果询问的不是1的阶乘，就返回n *（n -1)
+    return n * factorial(n - 1)
+  }
+</script>
+</body>
+</html>

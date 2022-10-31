@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  //由用户输入数字n，计算3/2 + 4/3 + 5/4 + 。。。+ （n + 1）/n的结果
+  // var n = Number(prompt('请输入数字'))
+  //
+  // //累加器
+  // var sum = 0;
+  //
+  // //遍历分母就可以了，因为分子就是分母加1的关系
+  // for (var i = 2; i <= n; i++){
+  //      sum += (i + 1) / i;
+  // }
+  // alert(sum.toFixed(2));
+
+
+  //累乘器
+  //计算阶乘
+  // var n = Number(prompt('请输入数字'))
+  // //累乘器，一定要注意，累乘器要从1开始，因为如果从0开始，0乘以任何数字都是0
+  // var result = 1;
+  // //倒着遍历，计算阶乘
+  // for (var i = n; i >= 1; i--){
+  //     result *= i;
+  // }
+  // alert(result);
+
+  //用莱布尼茨级数估算圆周率
+  //pai = 2 * （1 + 1/3 +（1 * 2）/ (3 * 5) + (1 *2 * 3)/ (3 * 5 * 7) + (1 * 2 * 3 * 4)/(3 * 5 * 7 * 9) + (1*....n)/(3*5*...2n+1))
+
+  //累加器，就是最后的答案
+  var sum = 0;
+  //累乘器
+  var item = 1;
+  //让用户输入n
+  var n = Number(prompt('请输入数字n'))
+  for (var i = 1; i <= n; i++){
+     //要先制作出这一页，使用累乘器制作，item就是小车厢
+     item *= i / (2 * i + 1);
+      // console.log(item)
+      //把车厢往累加器中累加
+      sum += item;
+  }
+  alert((1 + sum )* 2)
+</script>
+
+</body>
+</html>

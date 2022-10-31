@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  //数组的jion（）方法可以使数组转为字符串；字符串的split（）方法可以使字符串转为数组
+  //jion（）参数表示以什么字符作为连接符，如果留空则默认以逗号分隔，如同调用toString（）方法
+  //split（）的参数表示以什么字符拆分字符串，一般不能留空
+
+  //concat（）方法可以合并连结多个数组,不会改变原数组
+  var arr1 = [1, 2, 3, 4, 5]
+  var arr2 = [1, 2, 3, 4, 5]
+  var arr3 = [1, 2, 3, 4, 5]
+  var arr = arr1.concat(arr2, arr3)
+  console.log(arr);
+
+  //reverse()用来将一个数组中的全部顺序置反
+  var arr4 = [1, 2, 3, 4, 5]
+  arr4.reverse()
+  console.log(arr4);
+
+  //indexof()方法的功能是搜索数组中的元素，并返回它所在的位置，如果元素不存在，则返回-1
+  //includes()方法的功能是判断一个数组是否包含一个指定的值，返回布尔值
+</script>
+</body>
+</html>

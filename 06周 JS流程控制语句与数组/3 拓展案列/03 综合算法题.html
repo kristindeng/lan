@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //循环嵌套
+    // for (var i = 0; i < 3; i++){
+    //    for (var j = 0; j < 3; j++){
+    //        console.log(i,j);
+    //    }
+    // }
+
+    //寻找100以内的质数
+    //穷举法
+    outer:for (var i = 2; i <= 100; i++){
+        //内循环开始从2开始尝试除以i，如果能够整除，说明它不是一个质数，就可以筛选下一个数字了
+        for (var j= 2; j < i; j++){
+            if(i % j === 0){
+                //说明数字i不是质数，因为它找到了除1和它自身之外的约数了，测试下一个数字
+                //continue表示放弃这个数字，开始迭代下个数字，continue它负责的是它所在的最内层的for循环
+                //要给外层for循环加上lable，这样就表示立即开始迭代外层for循环的下一个数字了，而不是内循环
+                continue outer;
+            }
+        }
+        //能够遇见这条语句的数字i；一定是质数，否则就被continue略过了
+        console.log(i);
+    }
+
+    //鸡兔同笼
+    //假设小鸡有a只，兔子有b只
+    // for (var a = 0; a <= 35; a++ ){
+    //     for (var b = 0; b <= 35; b++){
+    //         if (a + b === 35 && 2 * a + 4 * b ===94){
+    //             console.log('小鸡有' + a + '只', '兔子有' + b + '只')
+    //         }
+    //     }
+    // }
+</script>
+</body>
+</html>
+

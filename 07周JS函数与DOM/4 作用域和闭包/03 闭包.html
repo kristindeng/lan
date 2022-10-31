@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  //闭包：是函数本身和该函数声明时所处的环境状态的组合；特性：函数能够记忆住其定义时所处的环境
+  function fun(){
+    var name = '慕课网'
+    //返回一个局部函数
+    return function (){
+      alert(name)
+    }
+  }
+  //调用外部函数，就能得到内部的函数，用变量inn来接收
+  var inn = fun()
+  //执行inn函数，就相当于在fun函数的外部，执行了内部函数
+  inn()
+
+  //观察闭包现象
+  //在JS中，每次创建函数时都会创建闭包
+  //闭包非常实用：因为它允许我们将数据与操作该数据的函数关联起来
+  //闭包的功能：记忆性、模拟私有变量
+</script>
+</body>
+</html>

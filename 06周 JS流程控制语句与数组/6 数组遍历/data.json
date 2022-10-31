@@ -1,0 +1,66 @@
+{
+    "code": 200,
+    "data": {
+        "ext": {
+            "utm_medium": "distribute.pc_search_hot_word.none-task-hot_word-alirecmd-1-js 数组-null-null.172^v8^tag_flag"
+        },
+        "size": 2,
+        "items": [
+            {
+                "ext": null,
+                "resourceId": "",
+                "mediaAssetInfo": null,
+                "productId": "js 数组",
+                "reportData": {
+                    "eventClick": true,
+                    "data": {
+                        "mod": "popu_895",
+                        "extra": "{\"utm_medium\":\"distribute.pc_search_hot_word.none-task-hot_word-alirecmd-1-js 数组-null-null.172^v8^tag_flag\",\"dist_request_id\":\"1666849051394_10614\",\"hotword\":\"js 数组\"}",
+                        "dist_request_id": "1666849051394_10614",
+                        "ab_strategy": "default",
+                        "index": "1",
+                        "strategy": "alirecmd"
+                    },
+                    "urlParams": {
+                        "utm_medium": "distribute.pc_search_hot_word.none-task-hot_word-alirecmd-1-js 数组-null-null.172^v8^tag_flag",
+                        "depth_1-utm_source": "distribute.pc_search_hot_word.none-task-hot_word-alirecmd-1-js 数组-null-null.172^v8^tag_flag"
+                    },
+                    "eventView": true
+                },
+                "recommendType": "ali",
+                "index": 1,
+                "style": "word_1",
+                "strategyId": "alirecmd",
+                "productType": "hot_word"
+            },
+            {
+                "ext": null,
+                "resourceId": "",
+                "mediaAssetInfo": null,
+                "productId": "JavaScript",
+                "reportData": {
+                    "eventClick": true,
+                    "data": {
+                        "mod": "popu_895",
+                        "extra": "{\"utm_medium\":\"distribute.pc_search_hot_word.none-task-hot_word-alirecmd-2-JavaScript-null-null.172^v8^tag_flag\",\"dist_request_id\":\"1666849051394_10614\",\"hotword\":\"JavaScript\"}",
+                        "dist_request_id": "1666849051394_10614",
+                        "ab_strategy": "default",
+                        "index": "2",
+                        "strategy": "alirecmd"
+                    },
+                    "urlParams": {
+                        "utm_medium": "distribute.pc_search_hot_word.none-task-hot_word-alirecmd-2-JavaScript-null-null.172^v8^tag_flag",
+                        "depth_1-utm_source": "distribute.pc_search_hot_word.none-task-hot_word-alirecmd-2-JavaScript-null-null.172^v8^tag_flag"
+                    },
+                    "eventView": true
+                },
+                "recommendType": "ali",
+                "index": 2,
+                "style": "word_1",
+                "strategyId": "alirecmd",
+                "productType": "hot_word"
+            }
+        ]
+    },
+    "message": "success"
+}

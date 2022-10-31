@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<div id="box"></div>
+<body>
+<script>
+  //如何改变元素节点中的内容可以使用下面两个相关属性
+  // innerHTML属性能以HTML语法设置节点中的内容
+  //innerText属性只能以纯文本的形式设置节点中的内容
+
+  var oBox = document.getElementById('box')
+  oBox.innerHTML = '慕课网'
+  oBox.innerHTML = '<ul><li>牛奶</li><li>咖啡</li></ul>'
+  oBox.innerText = '慕课网'
+  oBox.innerText = '<ul><li>牛奶</li><li>咖啡</li></ul>'
+</script>
+</body>
+</html>

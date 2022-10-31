@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  //让用户输入星期几
+  var week = Number(prompt('请输入星期几'))
+  if (week > 6 || week < 0) {
+    alert("请输入正确的星期")
+  } else {
+    //让用户输入年龄
+    var age = Number(prompt('请输入年龄'))
+    //让星期几作为大前提
+    // if (week === 0 || week ===6){
+    //   //周末
+    //   if (age >= 10){
+    //     alert(500);
+    //   }else {
+    //     alert(210);
+    //   }
+    // }else {
+    //   //平日
+    //   if (age >= 10){
+    //     alert(300);
+    //   }else {
+    //     alert(140);
+    //   }
+    // }
+
+    //让年龄作为大前提
+    if(age >= 10 ) {
+      // 年龄大于等于10岁
+      if (week === 0 || week === 6){
+        // 如果是周六日
+        alert(500)
+      } else {
+        //
+        alert(300)
+      }
+    } else {
+      // 小于10岁
+        //平日:周一到周五
+        if (week === 1 || week === 2 || week ===3 || week ===4 || week ===5){
+          alert(140);
+        }else {
+          alert(210);
+        }
+    }
+
+    // 周六日
+    // if (week === 0 || week === 6) {
+    //   // 年龄大于等于10岁的：
+    //   if (age >= 10) {
+    //     // 票价
+    //     alert(300)
+    //   } else {
+    //     // 票价
+    //     alert(140)
+    //   }
+    //
+    // } else {
+    //   //周一到周五
+    //   // 年龄大于等于10岁的：
+    //   if (age >= 10) {
+    //     // 票价
+    //     alert(500)
+    //   } else {
+    //     // 票价
+    //     alert(210)
+    //   }
+    // }
+
+
+    // 年龄大于等于10岁的，周六日：500，周一到周五：300
+    // 年龄小于10岁的，周六日：210，周一到周五：140
+
+    // 年龄大于等于10岁的
+    if (age >= 10) {
+      if (week === 0 || week === 6) {
+        // 周六日：500
+        alert(500)
+      } else {
+        // 周一到周五：300
+        alert(300)
+      }
+    } else {
+      // 年龄小于10岁的
+      if (week === 0 || week === 6) {
+        // 周六日：210
+        alert(210)
+      } else {
+        // 周一到周五：140
+        alert(140)
+      }
+    }
+  }
+
+
+</script>
+</body>
+</html>

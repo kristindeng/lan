@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  //综合运算顺序：非运算-数学运算-关系运算-逻辑运算
+  //变量的范围表示：验证变量a是否介于5到12之间
+  // a >= 5 && a <= 12
+
+  //判断是否是闰年
+  //要让用户先输入一个年份
+  var year = Number(prompt('请输入年份'));
+  //根据两个条件进行判断（满足其中一个条件，就是闰年）
+  //一：能被4整除，且不能被100整除  二：能被100整除，且能被400整除
+  alert(year % 4 == 0 && year % 100 != 0 || year % 100 == 0 && year % 400 ==0);
+</script>
+</body>
+</html>

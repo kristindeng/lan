@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+// 变量含义：就是在内存中存储值的一个符号，变量只是值的容器并不是值的本身
+//定义变量，第一步就是声明它，并给他赋值，var a = 5;
+var a = 5;
+console.log(a);
+
+//改变变量值，变量的值可以被改变，改变变量不再需要书写var了
+var b = 10;
+b = 20;
+// console.log(b); 输出20
+
+// 变量的合法命名：只能由字母、数字、下划线、¥组成，但不能以数字开头，不能是关键字或保留字
+//变量名大小写敏感，a和A是两个不同的变量，这两条统称为标识符的命名规则，函数、类名、对象的属性等也要遵守这个命名规则
+
+//优秀的变量命名法：驼峰命名法：mathTestScore  c风格：math_test_score  匈牙利命名法：iMathTestScore
+
+//变量的默认值：一个变量只定义，但是没有赋值，默认值是undefined
+//一个变量只有被var定义，并赋值之后，才算正式初始化完成
+// var c;
+// console.log(c); 输出：undefined
+// c = 10;
+// console.log(c)  输出：10
+
+//变量的常见错误：不用var定义，而直接将值赋予它，虽不引发报错，但是会产生作用域问题
+d = 10;
+// console.log(d); 能输出10
+
+//变量常见错误：尝试使用一个既没有被var定义过，也没有赋过值的字符，就会产生引用错误
+console.log(e);
+
+//等号表示赋值
+var f = 10;
+f = f + 1;
+// console.log(f); 输出11；
+
+//同时声明多个变量
+var j = 0, h = 0;
+</script>
+</body>
+</html>

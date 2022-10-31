@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="box">
+  <p>我是段落</p>
+  <p class="spec">我是段落</p>
+  <p>我是段落</p>
+</div>
+<script>
+  //querySelector()方法的功能是通过选择器得到元素
+  //querySelector()方法只能得到页面上一个元素，如果有多个元素复合条件，则只能得到第一个元素
+  //querySelector()方法从IE8开始兼容，但从IE9开始支持CSS3选择器
+  var the_p = document.querySelector('#box .spec')
+  console.log(the_p)
+
+
+
+</script>
+
+</body>
+</html>

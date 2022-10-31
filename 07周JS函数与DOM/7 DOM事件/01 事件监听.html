@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <style>
+    div{
+      width: 200px;
+      height: 200px;
+      background-color: #ccc;
+    }
+  </style>
+</head>
+<body>
+
+<div id="box"></div>
+
+<script>
+  //事件监听：DOM允许我们书写JS代码以让HTML元素对事件做出反应，
+  //什么是事件：用户与网页的交互动作
+  //监听：就是让计算机随时能够发现这个事件发生了，从而执行程序员预先编写的一些程序
+  //最简单的设置事件监听的方法：onxxxx属性
+
+  // var oBox = document.getElementById('box')
+  // //给box这个盒子添加点击事件监听
+  // oBox.onclick = function (){
+  //   alert('你好，我是点击事件函数')
+  // }
+
+  //常见的鼠标事件监听
+  var oBox = document.getElementById('box')
+  oBox.onclick = function (){
+    console.log('我是onclick')
+  }
+  oBox.ondblclick = function (){
+    console.log('我是ondblclick')
+  }
+  oBox.onmousedown = function (){
+    console.log('我是onmousedown')
+  }
+  oBox.onmouseup = function (){
+    console.log('我是onmouseup')
+  }
+  oBox.onmouseenter = function (){
+    console.log('我是onmouseenter')
+  }
+  oBox.onmouseleave = function (){
+    console.log('我是onmouseleave')
+  }
+  oBox.onmousemove = function (){
+    console.log('我是onmousemove')
+  }
+</script>
+</body>
+</html>

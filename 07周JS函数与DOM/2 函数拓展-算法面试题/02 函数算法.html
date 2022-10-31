@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  //JS内置sort（）方法
+  //数组排序可以使用sort（）方法，这个方法的参数又是一个函数
+  var arr = [33, 22, 55, 11]
+  //排序，函数是JS中的一等公民，它可以当做参数传入另一个函数
+  arr.sort(function (a, b){
+    //这个函数中ab分别表示数组中靠前和靠后的项，如果需要将它们交换位置，则返回任意正数，否则返回任意负数
+    if (a > b){
+      return 1
+    }else {
+      return -1
+    }
+  })
+  console.log(arr)
+</script>
+</body>
+</html>

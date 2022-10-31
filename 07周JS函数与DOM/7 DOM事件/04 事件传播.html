@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<style>
+  /*实际上：事件的传播是：先从外到内，然后再从内到外*/
+  /*onxxxx这样的写法只能监听冒泡阶段*/
+  /*DOMO级事件监听：只能监听冒泡阶段*/
+  /*DOMO2级事件监听：oBox.addEventListener('click', function(){  },true)   true:监听捕获阶段  false：监听冒泡阶段*/
+  /*注意事项：最内部元素不再区分捕获和冒泡阶段，会先执行写在前面的监听，然后执行后写的监听*/
+  /*如果给元素设置相同的两个或多个同名事件，则DOMO级写法后面写的会覆盖先写的；而DOM2级会按顺序执行*/
+  #box1{
+    width: 202px;
+    height: 202px;
+    border: 1px solid #000000;
+    padding: 50px;
+  }
+  #box2{
+    width: 100px;
+    height: 100px;
+    border: 1px solid #000000;
+    padding: 50px;
+  }
+  #box3{
+    width: 100px;
+    height: 100px;
+    border: 1px solid #000000;
+  }
+</style>
+
+</head>
+<body>
+<div id="box1">
+  <div id="box2">
+    <div id="box3"></div>
+  </div>
+
+  <script>
+    var oBox1 = document.getElementById('box1')
+    var oBox2 = document.getElementById('box2')
+    var oBox3 = document.getElementById('box3')
+
+
+    // oBox1.onclick = function (){
+    //   //只能监听冒泡阶段
+    //   console.log('我是box1的onclick')
+    // }
+    // oBox2.onclick = function (){
+    //   console.log('我是box2的onclick')
+    // }
+    // oBox3.onclick = function (){
+    //   console.log('我是box3的onclick')
+    // }
+
+    // oBox1.addEventListener('click', function (){
+    //   console.log('我是box1的捕获阶段')
+    // }, true)
+    // oBox2.addEventListener('click', function (){
+    //   console.log('我是box2的捕获阶段')
+    // }, true)
+    // oBox3.addEventListener('click', function (){
+    //   console.log('我是box3的捕获阶段')
+    // }, true)
+    // oBox1.addEventListener('click', function (){
+    //   console.log('我是box1的冒泡阶段')
+    // }, false)
+    // oBox2.addEventListener('click', function (){
+    //   console.log('我是box2的冒泡阶段')
+    // }, false)
+    // oBox3.addEventListener('click', function (){
+    //   console.log('我是box3的冒泡阶段')
+    // }, false)
+
+    //覆盖事件
+    //输出：B、C、D，A被B覆盖
+    oBox1.onclick = function (){
+        alert('A')
+    }
+    oBox1.onclick = function (){
+        alert('B')
+    }
+
+    oBox2.addEventListener('click', function (){
+        alert('C')
+    }, false)
+    oBox2.addEventListener('click', function (){
+        alert('D')
+    }, false)
+  </script>
+</div>
+</body>
+</html>

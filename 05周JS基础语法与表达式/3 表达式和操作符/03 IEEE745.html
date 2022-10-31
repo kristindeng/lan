@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+//JS使用IEEE754二进制浮点数算术标准，这会使一些个别的小数运算产生'丢失精度'问题，了解即可
+// 0.1 + 0.2 = 0.300000000004
+//解决办法：在进行小数运算时，要调用数字的toFixed（）方法，保留指定的小数位数
+//  （0.1 + 0.2).toFixed  //0.30    Number((0.1 + 0.2).toFixed(2))//0.3
+
+
+//幂和开根号：需要使用Math对象的相关方法进行计算
+Math.pow(2,3)//8
+Math.pow(3,2)//9
+Math.sqrt(81) //9
+Math.sqrt(-81) /NaN 负数不能开根号
+
+
+//Math.ceil()向上取整      Math.floor()向下取整
+Math.ceil(2.4)//3        Math.floor(2.4)//2
+Math.ceil(-2.4)//-2       Math.floor(-2.4)//-3
+Math.ceil(2)//2           Math.floor(2)//2
+</body>
+</html>

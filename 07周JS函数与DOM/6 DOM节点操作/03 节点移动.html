@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="box1">
+  <p id="para">我是段落</p>
+</div>
+
+<div id="box2">
+  <p>我是box2的原有p标签</p>
+  <p>我是box2的原有p标签</p>
+  <p>我是box2的原有p标签</p>
+  <p>我是box2的原有p标签</p>
+</div>
+
+<script>
+  //节点的移动
+  // 如果将已经挂载到DOM树上的节点成为appendChild（）或者  insertBefore（）的参数，这个节点将会被移动
+  // 公式： 新父节点.appendChild（已经有父亲的节点）新父节点.insertBefore（已经有父亲的节，标杆节点）
+
+  var box1 = document.getElementById('box1')
+  var box2 = document.getElementById('box2')
+  var para = document.getElementById('para')
+  var ps_inbox2 = box2.getElementsByTagName('p')
+  // box2.appendChild(para)
+  box2.insertBefore(para,ps_inbox2[0])
+
+
+
+</script>
+</body>
+</html>

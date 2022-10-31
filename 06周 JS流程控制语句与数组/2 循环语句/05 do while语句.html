@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  //do while是一种'后测试循环语句'，先执行循环体，然后再测试条件是否满足；do循环体一定会至少执行一次，然后再检测循环执行条件是否为true，决定是否继续执行循环体
+  //输出1-100
+  var i = 1;
+  do{
+    console.log(i);
+    i++;
+  }while (i <= 100);
+
+  //随机数函数
+  //得到[a, b]区间的整数，公式：parseInt（Math.random() * (b - a + 1)) + a
+  //随机两个变量，dx和dy，它们都在[-4, 4]之间随机取值，但是不能都为0
+  do{
+      var dx = parseInt(Math.random() * 9) - 4;
+      var dy = parseInt(Math.random() * 9) - 4;
+  }while (dx === 0 && dy === 0)
+  //只要你出循环，就保证dx和dy不都是零
+  console.log(dx, dy);
+
+</script>
+</body>
+</html>

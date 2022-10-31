@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+  <script>
+    //在测试DOM代码时，通常JS代码一定要写到HTML节点的后面，否则JS无法找到相应HTML节点
+    //可以使用window.onload = function(){}事件，使页面加载完毕后，再执行指定的代码
+
+    //给window对象添加onload事件监听。unload表示页面都加载完毕了
+    window.onload = function (){
+      var box1 = document.getElementById('box1')
+      var box2 = document.getElementById('box2')
+      console.log(box1)
+      console.log(box2)
+    }
+  </script>
+</head>
+<body>
+<div id="box1">我是一个盒子0</div>
+<div id="box2">我是一个盒子1</div>
+
+
+</body>
+</html>

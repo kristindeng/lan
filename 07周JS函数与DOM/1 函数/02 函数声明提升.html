@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  //变量提升
+  // fun()
+  // function fun(){
+  //   console.log('我执行了')
+  // }
+  // //如果函数是用函数表达式的写法定义的，则没有提升性
+  // fun()
+  // var fun = function (){
+  //   console.log('我执行了')
+  // }
+
+  //函数优先提升
+  fun()
+  //变量声明提升，无法覆盖提升的函数
+  var fun = function (){
+    alert('A')
+  }
+  //函数优先提升
+  function fun(){
+    alert('B')
+  }
+  fun()
+</script>
+</body>
+</html>

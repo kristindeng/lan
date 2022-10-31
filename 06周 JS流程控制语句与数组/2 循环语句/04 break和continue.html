@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  //break表示立即终止循环，用在while语句中，通常和while（true）{}搭配使用
+  //复习一下之前写的while语句
+  // var i = 1;
+  // while (i *i <= 456789){
+  //   i++
+  // }
+  // console.log(i)
+
+  //新写法：while（true）{}结合break来实现
+  // var n = 1;
+  // while (true){
+  //   if(n * n >456789){
+  //     console.log(n);
+  //     break
+  //   }
+  //   n++
+  // }
+
+
+  //小兔子拔萝卜，第1天拔1个，第2天拔2个，第3天拔3个，问第几天能拔完500个萝卜
+  // var i = 1;
+  // var sum = 0;
+  // while (sum < 500){
+  //   sum += i;
+  //   i++
+  // }
+  // 一定要注意这里有一个'出一错误'
+  // console.log(i-1)
+
+  var n = 1;
+  var sum = 0;
+  while (true){
+    if (sum > 500){
+      sum = sum + n;
+      n++;
+      // sum:1 n:2
+      // sum:3 n:3
+      // sum:6 n:4
+      // sum:10 n:5
+      // sum:15 n:6
+      // sum:21 n:7
+      // sum:28 n:8
+      console.log(n-1);
+      break
+    }
+  }
+
+  //contain语句用于跳过循环中的一个迭代，并继续执行循环中的下一个迭代。for循环经常使用
+  for (var i = 0; i < 5; i++){
+    if (i === 3){
+      continue;
+    }
+    console.log(i);//0 1 2 4
+  }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<div id = 'box'>
+  <p>我是原本的段落0</p>
+  <p>我是原本的段落1</p>
+  <p>我是原本的段落2</p>
+</div>
+<body>
+<script>
+  //节点的创建：document.createElement()方法用于创建一个指定tagname的HTML元素
+  //新创建出的节点是'孤儿节点'，这意味着它并没有被挂载到DOM树上，我们无法看见它
+  //必须继续使用appendChild()或insertBefore()方法将孤儿节点插入到DOM数上
+
+  //appendChild:任何已经在DOM树上的节点，都可以调用appendChild（）方法，它可以将孤儿节点挂载到它的内部，成为它最后一个子节点
+  // 公式：父节点.appendChild(孤儿节点）
+  //insertBefore：任何已经在DOM树上的节点，都可以调用insertBefore（）方法，它可以将孤儿节点挂载到它的内部，成为它的'标杆子节点'之前的节点
+  // 公式：父节点.insertBefore(孤儿节点，标杆节点）
+
+
+  var oBOx = document.getElementById('box')
+  var ops = oBOx.getElementsByTagName('p')
+  //创建孤儿节点
+  var op = document.createElement('p')
+  //设置内部文字
+  op.innerText = '我是新来的'
+  //上树
+  //oBOx.appendChild(op)
+  oBOx.insertBefore(op,ops[0])
+
+
+</script>
+</body>
+</html>

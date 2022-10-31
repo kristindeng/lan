@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  //变量作用域
+  //JS是函数级作用域编程语言：变量只在其定义时所在的function内部有意义
+  function fun(){
+    //变量a是在fun函数中被定义的，所以变量a只在fun函数内部有定义，fun函数就是a的'作用域'变量a被称为局部变量
+    var a = 10
+  }
+  fun()
+  console.log(a)//报错
+
+  //全局变量
+  //如果不将变量定义在任何函数的内部，此时这个变量就是全局变量，它在任何函数内都可以被访问和更改
+  var a = 10
+  function fun(){
+    a++
+    console.log(a)//  11
+  }
+  //调用函数
+  fun()
+  console.log(a)//  11
+
+
+  //遮蔽效应
+  //如果函数中也定义了和全局同名的变量，则函数内的变量会将全局的变量进行'遮蔽'
+  var a = 10
+  function fun(){
+    var a = 5
+    a++
+    console.log(a)// 6
+  }
+  fun()
+  console.log(a)// 10
+
+
+  //注意考虑变量声明提升的情况
+  var a = 10
+  function fun(){
+    //局部变量a被自增1，a此时是undefined，自增1的结果是NaN
+    a++
+    //重新将a赋值为5
+    var a = 5
+    console.log(a)// 5
+  }
+  fun()
+  console.log(a)//  10
+</script>
+</body>
+</html>

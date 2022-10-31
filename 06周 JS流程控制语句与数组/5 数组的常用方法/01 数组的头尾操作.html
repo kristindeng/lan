@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  //数组的头尾操作方法：
+  // push（）在尾部插入新项， pop（）在尾部删除，  unshift（）在头部插入新项， shift（）在头部删除
+
+  //push（）方法用来在数组末尾推入新项，参数就是要推入的项； 如果要推入多项，可以用逗号隔开； 调用push（）方法后，数组会立即改变，不需要赋值
+  // var arr = [33,44,55,66]
+  // arr.push(77)
+  // arr.push(88, 99)
+  // console.log(arr);
+
+  //pop（）在尾部删除，不仅会删除数组末项，而且会返回被删除的项
+  // var arr = [33,44,55,66]
+  //删除的那一项会返回赋给item，如果直接就想删除，就不用写item
+  // var item = arr.pop()
+  // console.log(arr)
+  // console.log(item)
+
+  // unshift（）在头部插入新项，如果要推入多项，可以用逗号隔开；数组会立即改变，不需要赋值
+  // var arr = [33,44,55,66]
+  // arr .unshift(11)
+  // arr.unshift(0)
+  // console.log(arr);
+
+  //shift（）在头部删除，用来删除数组中下标为0的项，不仅会删除数组首项，而且会返回被删除的项
+  var arr = [33,44,55,66]
+  arr.shift()
+  console.log(arr)
+</script>
+</body>
+</html>

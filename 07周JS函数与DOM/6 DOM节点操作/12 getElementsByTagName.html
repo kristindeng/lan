@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="box1">
+  <p>我是段落</p>
+  <p>我是段落</p>
+  <p>我是段落</p>
+  <p>我是段落</p>
+</div>
+<div id="box2">
+  <p>我是段落</p>
+  <p>我是段落</p>
+  <p>我是段落</p>
+  <p>我是段落</p>
+</div>
+
+<script>
+  //数组方便遍历，从而可以批量操控元素节点
+  //即使页面上只有一个指定标签名的节点，也将得到长度为1的数组
+  //任何一个节点元素也可以调用getElementsByTagName()方法，从而得到其内部的某种类的元素节点
+  var box1 = document.getElementById('box1')
+  var ps_inbox1 = box1.getElementsByTagName('p')
+  console.log(ps_inbox1)
+</script>
+</body>
+</html>

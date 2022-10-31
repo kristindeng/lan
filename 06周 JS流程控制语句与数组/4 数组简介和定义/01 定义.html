@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  //数组（Array），用来存储一组相关的值，从而方便进行求和、计算平均数、逐项遍历等，它是非常重要的一种数据结构
+  //数组定义方法一(最常见）
+  var arr1 = [33,44,55,66]
+  //数组定义方法二
+  var arr2 = new Array(33,44,55,66);
+  //数组定义方法三
+  var arr3 = new Array(4);
+
+  //访问数组项。数组的每一项都有下标，下标从0开始
+  var arr = ['A','B','C','D']
+  console.log(arr[0])
+  console.log(arr[2])
+  console.log(arr[3])
+  //下标越界：访问数组中不存在的项会返回undefined，不会报错
+  console.log(arr[-1])
+
+  //数组的长度从1开始数
+  var arr = ['A','B','C','D']
+  //数组最后一项的下标是数组的长度减1
+  console.log(arr.length-1);//4  减一表示访问数组最后一项
+</script>
+</body>
+</html>

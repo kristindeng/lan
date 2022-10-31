@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  //函数的参数：参数是函数内的一些待定值，必须传入这些参数的具体值；函数的参数可多可少，函数可以没有参数，也可以有多个参数，多个参数之间要用逗号隔开
+  function add (a, b){
+    var sum = a + b
+    console.log('两个数字的和' + sum)
+  }
+  add(4, 5)
+  add(2, 2)
+
+  //分别计算1到10，5到12，14到35的整数和
+  function calcSumFromAtoB(a, b){
+    for (var i = a, sum = 0; i <= b; i++){
+      sum += i
+    }
+    console.log('从' + a + '到' + b + '的所有整数和是' + sum)
+  }
+  calcSumFromAtoB(3, 7)
+
+  //arguments:表示它接收到的实参列表，它是一个类数组对象
+  function fun(){
+    var sum = 0
+    for (var i = 0; i < arguments.length; i++) {
+      sum +=arguments[i]
+    }
+    console.log('所有参数的和是' + sum)
+  }
+  fun(33, 44, 23, 34)
+</script>
+</body>
+</html>

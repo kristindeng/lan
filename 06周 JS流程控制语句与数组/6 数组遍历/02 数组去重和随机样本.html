@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  // //数组去重
+  // var arr = [1, 1, 1, 2, 2, 3, 3, 3, 2, 1]
+  // //结果数组
+  // var result = []
+  // //遍历数组
+  // for (var i = 0; i < arr.length; i++){
+  //   //判断遍历到的这项是否在结果数组中，如果不在就推入
+  //   //includes方法用来判断某项是否在数组中
+  //   if (!result.includes(arr[i])){
+  //     result.push(arr[i])
+  //   }
+  // }
+  // console.log(result)
+
+
+  //随机样本
+  var arr = [3, 6, 10, 5, 8, 9]
+  var result = []
+  //遍历数组
+  for (var i = 0; i < 3; i++){
+    //随机选择一项的下标，数组的下标0～arr.length-1
+    //  之前学习过一个random公式，[a,b]区间的随机数是parseInt（Math.random()*(b-a+1)) + a
+    var n = parseInt(Math.random()*arr.length)
+    //把这项推入结果数组
+    result.push(arr[i])
+    //删除这项，防止重复被随机到
+    arr.splice(n, 1)
+  }
+</script>
+</body>
+</html>

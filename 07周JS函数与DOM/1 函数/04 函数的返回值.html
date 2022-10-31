@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  //return关键字表示'函数的返回值'
+  //函数的功能是返回两个参数的和
+  function sum(a, b) {
+    return a + b
+  }
+  var result = sum(3, 4)
+  console.log(result)
+
+  //第二种
+  function sum(a, b){
+      var result = a + b
+      console.log('两个数字的和' + result)
+  }
+  sum(3, 4)
+
+
+  //函数的返回值，调用一个有返回值的函数，可以被当作一个普通值，从而可以出现在任何可以书写值的地方
+  function sum(a, b) {
+      return a + b
+  }
+  var result = sum(3, sum(4, 5))
+
+  //遇见return即退出函数
+  //调用函数时，一旦遇见return语句则会立即退出函数，将执行权交还给调用者
+  function fun(){
+      console.log('A')
+      //退出函数之后，c也不会执行
+      return'B'
+      console.log('C')
+  }
+  console.log(1)
+  var char = fun()
+  console.log(char)
+  console.log(2)//1 A 2
+
+  //遇见return即退出函数
+  //结合if语句的时候，往往不需要写else分支
+  //如，判断一个数字是否是偶数
+  // function checkEven(n) {
+  //     //常规写法
+  //     if (n % 2 === 0){
+  //         return true
+  //     }else {
+  //         return false
+  //     }
+  // }
+  // var result = checkEven(6)
+  // console.log(result)
+
+  //结合if语句的时候，往往不需要写else分支
+  function checkEven(n){
+      if (n % 2 === 0) return true
+      return false
+  }
+  var result = checkEven(6)
+  console.log(result)
+</script>
+</body>
+</html>

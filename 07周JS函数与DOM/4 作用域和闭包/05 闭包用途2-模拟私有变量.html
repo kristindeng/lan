@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  //定义一个变量a，要求是能保证这个a只能被进行指定操作（如加1、乘2），而不能进行其他操作
+  //封装一个函数，这个函数的功能就是私有变量
+  function  fun(){
+    //定义一个局部变量a
+    var a = 0
+
+    return {
+      getA: function (){
+        return a
+      },
+      add : function (){
+        a++
+      },
+      pow: function (){
+        a *= 2
+      }
+    }
+  }
+  var obj = fun()
+  //如果想在fun函数外面使用变量a，唯一的方法就是调用getA（）方法
+  console.log(obj.getA())
+  //想让变量a进行加1操作
+  obj.add()
+  obj.add()
+  obj.add()
+  console.log(obj.getA())
+  obj.pow()
+  console.log(obj.getA())
+
+
+
+  //使用闭包注意点
+  //不能滥用闭包，否则会造成网页的性能问题，严重时可能导致内存泄漏。所谓内存泄露是指程序中已动态分配的内存由于某种原因未释放或无法释放
+  //闭包的一道面试题
+  function addCount(){
+    var count = 0
+    return function (){
+      count = count + 1
+      console.log(count)
+    }
+  }
+  var fun1 = addCount()
+  var fun2 = addCount()
+  fun1() //1
+  fun2() //1
+  fun2() //2
+  fun1() //2
+</script>
+</body>
+</html>

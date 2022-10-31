@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<img src="img.png" id="pic">
+<a href="https://www.baidu.com" id="link">
+  去百度
+</a>
+
+<div id="box"></div>
+<script>
+  //如何改变元素节点的HTML属性
+  //标准W3C属性，如src、href等等，只需要打点进行更改即可  oImg.src = 'images/2.jpg'
+
+  var oPic = document.getElementById('pic')
+  var oLink = document.getElementById('link')
+  oPic.src = 'img_1.png'
+  oLink.herf = 'https://www.imooc.com'
+  oLink.innerText = '去慕课网'
+
+
+  //不符合W3C标准的属性，要使用setAttribute（）和getAttribute()来设置、读取
+  var box = document.getElementById('box')
+  box.setAttribute('data-n', 10)
+  var n = box.getAttribute('data-n')
+  alert(n)
+</script>
+</body>
+</html>
